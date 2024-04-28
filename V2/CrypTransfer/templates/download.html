@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Download File</title>
+    <link rel="stylesheet" href="{{ url_for('static', path='/download.css') }}">
+</head>
+
+<body>
+    <h1>Download File</h1>
+    {% if error_message %}
+    <p>{{ error_message }}</p>
+    {% endif %}
+    <p>To download the file, please enter the decryption password:</p>
+    <form action="/download/{{ file_id }}/" method="post">
+        <label for="password">Decryption Password:</label><br>
+        <input type="password" id="password" name="password"><br><br>
+        <button type="submit">Download</button>
+    </form>
+
+    <button onclick="redirectToMain()">Page d'accueil</button>
+
+    <script>
+        function redirectToMain() {
+            window.location.href = "/"; // Rediriger vers la route / de l'API
+        }
+    </script>
+
+</body>
+
+</html>
