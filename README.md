@@ -1,21 +1,41 @@
-# CryptoWeTransfer
-Créer environnement virtuel
+# Créer environnement virtuel
+
+```
 python3 -m venv venv
+```
 
-Windows
+### Windows
+
+```
 .\venv\Scripts\activate
+```
 
-macOS/Linux
+### macOS/Linux
+
+```
 source venv/bin/activate
+```
 
-installer les dépendance
+# installer les dépendance
+
+```
 pip install -r requirements.txt
+```
 
-lancer le projet :
+# lancer le projet :
+
+```
 uvicorn api:app --reload
+```
 
-With Docker
+# With Docker
+
+```
 docker-compose up --build
+```
 
-With Make
+# With Make
+
+```
 make dev
+```
